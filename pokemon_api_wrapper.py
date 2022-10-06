@@ -5,19 +5,6 @@ import requests
 res = requests.get('https://pokeapi.co/api/v2/pokemon/')
 res.json()
 
-# base_url = 'https://pokeapi.co/api/v2'
-# api_method = '/pokemon/'
-# name_id = 'charizard'
-
-# api_url = f"{base_url}{api_method}{name_id}"
-
-# res = requests.get(api_url)
-# poke_data = res.json()
-
-# poke_height = poke_data['height']
-
-# poke_weight = poke_data['weight']
-
 class PokemonAPI:
     
     base_url = 'https://pokeapi.co/api/v2'
@@ -44,14 +31,3 @@ class PokemonAPI:
 poke = PokemonAPI('charizard')
 print(poke.get_height())
 print(poke.get_weight())
-
-
-# while True:
-#     while True:
-#         city = input(' ')
-#         if city.lower() == 'done':
-#             break
-#         city_obj = client.get_current_weather(city)
-#         my_cities.append(city_obj)
-#     for city in my_cities:
-#         print(city.region)
